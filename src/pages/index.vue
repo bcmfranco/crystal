@@ -56,34 +56,44 @@ export default {
 <style scoped>
 
 :root {
-  --vue_green: #26a69a;
+  --vuegreen: #26a69a;
 }
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@font-face {
+  font-family: 'Nunito';
+  src: url('../../public/assets/Nunito_Sans/static/NunitoSans_7pt_Condensed-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 #container{
   display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    align-items: center;
-    justify-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+  height: 100vh;
+  font-family: Nunito;
 }
 
 #calculator_form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  max-width: 300px;
+  max-width: 400px;
   margin: 0 auto;
 }
 
 h2 {
   font-size: 24px;
-  color: #333;
+  color: #26a69a;
   margin-bottom: 20px;
 }
 
 label {
   font-size: 16px;
-  color: #333;
+  color: #26a69a;
   margin-bottom: 8px;
 }
 
@@ -114,6 +124,13 @@ button {
 
 button:hover {
   background-color: #00796b;
+}
+
+@media (max-width: 480px) {
+  #container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 80%;
+  }
 }
 
 
