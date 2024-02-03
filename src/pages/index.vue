@@ -1,19 +1,26 @@
 <template>
   <div id="container">
-    <h2>Calculadora de interés simple</h2>
-    <label for="capital">Capital:</label>
-    <input v-model="capital" placeholder="Ingrese el capital" />
 
-    <label for="interest">Interés:</label>
-    <input v-model="interest" placeholder="Ingrese el interés" />
+    <div id="brand">
+      brand
+    </div>
 
-    <label for="returnX">Retorno neto (X):</label>
-    <input :value="calculate_return_x" disabled />
+    <form id="calculator_form" action="">
+      <h2>Calculadora de interés simple</h2>
+      <label for="capital">Capital:</label>
+      <input v-model="capital" placeholder="Ingrese el capital" />
 
-    <label for="return">Retorno bruto (Y):</label>
-    <input :value="calculate_return_y" disabled />
+      <label for="interest">Interés:</label>
+      <input v-model="interest" placeholder="Ingrese el interés" />
 
-    <button @click="clear_inputs">Limpiar</button>
+      <label for="returnX">Retorno neto (X):</label>
+      <input :value="calculate_return_x" disabled />
+
+      <label for="return">Retorno bruto (Y):</label>
+      <input :value="calculate_return_y" disabled />
+
+      <button @click="clear_inputs">Limpiar</button>
+    </form>
   </div>
 </template>
 
@@ -52,23 +59,32 @@ export default {
   --vue_green: #26a69a;
 }
 
-#container {
+#container{
   display: grid;
-  grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
 }
 
-#container h2{
-  padding: 5px 0px;
-    text-transform: uppercase;
-    text-decoration: underline #26a69a;
-    font-weight: 300;
-    font-size: 24px;
-    color: #26a69a;
+#calculator_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 label {
   font-size: 16px;
-  color: var(--vue_green);
+  color: #333;
+  margin-bottom: 8px;
 }
 
 input {
@@ -77,24 +93,28 @@ input {
   border: 1px solid #26a69a;
   border-radius: 4px;
   margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[disabled] {
+  background-color: #f5f5f5;
 }
 
 button {
   font-size: 16px;
-  padding: 10px;
+  padding: 10px 20px;
   background-color: #26a69a;
-  color: white;
+  color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #208c7d;
+  background-color: #00796b;
 }
 
-.result_field {
-  margin-top: 20px;
-}
+
 </style>
