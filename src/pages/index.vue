@@ -91,6 +91,10 @@ export default {
 
 #brand #logotype{
   font-family: Anton;
+  width: 50px;
+  line-height: 50px;
+  font-size: 35px;
+  color: #26a69a;
 }
 
 #container{
@@ -110,10 +114,22 @@ export default {
   margin: 0 auto;
 }
 
-h2 {
+#calculator_form h2{
+  color: #26a69a;
+}
+
+#isotype h1 {
+  color: #26a69a;
+  margin: 0px;
+  padding: 0px;
+}
+
+#isotype h2 {
   font-size: 24px;
   color: #26a69a;
   margin-bottom: 20px;
+  margin: 0px;
+  padding: 0px;
 }
 
 label {
