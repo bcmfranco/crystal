@@ -78,12 +78,15 @@ export default {
 
 @font-face {
   font-family: 'Anton';
-  src: url('../../public/assets/anton/Anton-Regular.ttf') format('truetype');
+  src: url('../../public/assets/Anton/Anton-Regular.ttf') format('truetype');
 }
 
 #container #brand{
   /* display: grid;
   grid-template-columns: 25% 75%;
+
+  No está tomando la letra Anton
+
   grid-template-rows: 1fr; */
 
   display: flex;
