@@ -2,7 +2,16 @@
   <div id="container">
 
     <div id="brand">
-      brand
+      <div id="logotype">
+        <p>INT</p>
+      </div>
+      <div id="isotype">
+        <h1>Interceptor</h1>
+        <h2>Online investment calculator</h2>
+        <nav>
+          future navbarr
+        </nav>
+      </div>
     </div>
 
     <form id="calculator_form" action="">
@@ -67,6 +76,22 @@ export default {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Anton';
+  src: url('../../public/assets/anton/Anton-Regular.ttf') format('truetype');
+}
+
+#container #brand{
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+#brand #logotype{
+  font-family: Anton;
+}
 
 #container{
   display: grid;
@@ -128,8 +153,12 @@ button:hover {
 
 @media (max-width: 480px) {
   #container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #container #brand{
     grid-template-columns: 1fr;
-    grid-template-rows: 10% 80%;
   }
 }
 
