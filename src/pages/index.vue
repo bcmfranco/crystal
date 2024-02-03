@@ -82,9 +82,13 @@ export default {
 }
 
 #container #brand{
-  display: grid;
+  /* display: grid;
   grid-template-columns: 25% 75%;
-  grid-template-rows: 1fr;
+  grid-template-rows: 1fr; */
+
+  display: flex;
+  flex-direction: row;
+
   align-items: center;
   justify-items: center;
 }
@@ -174,7 +178,10 @@ button:hover {
   }
 
   #container #brand{
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */
+
+    display: flex;
+    flex-direction: column;
   }
 }
 
