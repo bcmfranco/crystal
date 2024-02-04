@@ -44,13 +44,22 @@ export default {
   computed: {
     calculate_return_x() {
       if (this.capital && this.interest) {
-        return parseFloat(this.capital) * (parseFloat(this.interest) / 100);
+        const result = parseFloat(this.capital) * (parseFloat(this.interest) / 100);
+        return result !== null ? result.toFixed(2) : null;
       }
       return null;
     },
     calculate_return_y() {
       if (this.capital && this.interest) {
-        return parseFloat(this.capital) + parseFloat(this.calculate_return_x);
+          const result = parseFloat(this.capital) + parseFloat(this.calculate_return_x);
+          return result !== null ? result.toFixed(2) : null;
+      }
+      return null;
+    },
+    calculate_return_12() {
+      if (this.capital && this.interest) {
+          const result = parseFloat(this.calculate_return_x) / 12;
+          return result !== null ? result.toFixed(2) : null;
       }
       return null;
     },
