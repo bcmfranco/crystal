@@ -1,19 +1,13 @@
 <template>
     <div id="container">
   
-      <div id="brand">
-        <div id="logotype">
-          <p>INT</p>
-        </div>
-        <div id="isotype">
-          <h1>Interceptor</h1>
-          <h2>Online investment calculator</h2>
-          <Navbarr />
-        </div>
+      <div>
+        <Brander />
+        <Navbarr />
       </div>
   
       <form id="calculator_form" action="">
-        <h2>Calculadora de interés simple</h2>
+        <h2>Calculadora de interés mensualizado</h2>
         <label for="capital">Capital:</label>
         <input v-model="capital" placeholder="Ingrese el capital" />
   
@@ -36,14 +30,15 @@
   
   <script>
 
-    import Navbarr from '../../public/components/navbarr.vue';
+      import Brander from '../../public/components/brander.vue';
+      import Navbarr from '../../public/components/navbarr.vue';
 
-
-    export default {
+      export default {
         components: {
-            Navbarr,
+          Brander,
+          Navbarr,
         },
-    data() {
+        data() {
         return {
             capital: null,
             interest: null
