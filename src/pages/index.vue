@@ -1,16 +1,11 @@
 <template>
   <div id="container">
 
-    <div id="brand">
-      <div id="logotype">
-        <p>INT</p>
-      </div>
-      <div id="isotype">
-        <h1>Interceptor</h1>
-        <h2>Online investment calculator</h2>
-        <Navbarr />
-      </div>
+    <div>
+      <Brander />
+      <Navbarr />
     </div>
+
 
     <form id="calculator_form" action="">
       <h2>Calculadora de interés simple</h2>
@@ -35,10 +30,12 @@
 
 // Poner todo el header dentro de un componente, y la navbarr adentro
 
+import Brander from '../../public/components/brander.vue';
 import Navbarr from '../../public/components/navbarr.vue';
 
 export default {
   components: {
+    Brander,
     Navbarr,
   },
   data() {
