@@ -8,9 +8,7 @@
       <div id="isotype">
         <h1>Interceptor</h1>
         <h2>Online investment calculator</h2>
-        <nav>
-          future navbarr
-        </nav>
+        <Navbarr />
       </div>
     </div>
 
@@ -34,7 +32,15 @@
 </template>
 
 <script>
+
+// Poner todo el header dentro de un componente, y la navbarr adentro
+
+import Navbarr from '../../public/components/navbarr.vue';
+
 export default {
+  components: {
+    Navbarr,
+  },
   data() {
     return {
       capital: null,

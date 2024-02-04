@@ -8,9 +8,7 @@
         <div id="isotype">
           <h1>Interceptor</h1>
           <h2>Online investment calculator</h2>
-          <nav>
-            future navbarr
-          </nav>
+          <Navbarr />
         </div>
       </div>
   
@@ -37,41 +35,48 @@
   </template>
   
   <script>
-  export default {
+
+    import Navbarr from '../../public/components/navbarr.vue';
+
+
+    export default {
+        components: {
+            Navbarr,
+        },
     data() {
-      return {
-        capital: null,
-        interest: null
-      };
-    },
-    computed: {
-      calculate_return_x() {
-        if (this.capital && this.interest) {
-          const result = parseFloat(this.capital) * (parseFloat(this.interest) / 100);
-          return result !== null ? result.toFixed(2) : null;
-        }
-        return null;
-      },
-      calculate_return_y() {
-        if (this.capital && this.interest) {
-            const result = parseFloat(this.capital) + parseFloat(this.calculate_return_x);
+        return {
+            capital: null,
+            interest: null
+        };
+        },
+        computed: {
+        calculate_return_x() {
+            if (this.capital && this.interest) {
+            const result = parseFloat(this.capital) * (parseFloat(this.interest) / 100);
             return result !== null ? result.toFixed(2) : null;
+            }
+            return null;
+        },
+        calculate_return_y() {
+            if (this.capital && this.interest) {
+                const result = parseFloat(this.capital) + parseFloat(this.calculate_return_x);
+                return result !== null ? result.toFixed(2) : null;
+            }
+            return null;
+        },
+        calculate_return_12() {
+            if (this.capital && this.interest) {
+                const result = parseFloat(this.calculate_return_x) / 12;
+                return result !== null ? result.toFixed(2) : null;
+            }
+            return null;
+        },
+        clear_inputs() {
+            this.capital = null;
+            this.interest = null;
         }
-        return null;
-      },
-      calculate_return_12() {
-        if (this.capital && this.interest) {
-            const result = parseFloat(this.calculate_return_x) / 12;
-            return result !== null ? result.toFixed(2) : null;
         }
-        return null;
-      },
-      clear_inputs() {
-        this.capital = null;
-        this.interest = null;
-      }
-    }
-  };
+    };
   </script>
   
   <style scoped>
