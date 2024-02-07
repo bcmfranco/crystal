@@ -8,7 +8,11 @@
 
 
     <form id="calculator_form" action="">
-      <h2>Calculadora de interés simple</h2>
+      <div id="form_head">
+        <h2>Ciclos ahorrados</h2>
+        <h3>Cuántos meses se puede vivir quemando el patrimonio</h3>
+      </div>
+
       <label for="capital">Capital:</label>
       <input v-model="capital" placeholder="Ingrese el capital" />
 

@@ -2,6 +2,7 @@
   <div id="gumcom_navbarr">
     <router-link to="/">Simple</router-link>
     <router-link to="/montly">Mensualizado</router-link>
+    <router-link to="/cicle">Ciclos</router-link>
   </div>
 </template>
 
