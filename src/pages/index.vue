@@ -81,40 +81,9 @@ export default {
 }
 
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
-@font-face {
-  font-family: 'Nunito';
-  src: url('../../public/assets/Nunito_Sans/static/NunitoSans_7pt_Condensed-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 
-@font-face {
-  font-family: 'Anton';
-  src: url('../../public/assets/Anton/Anton-Regular.ttf') format('truetype');
-}
-
-#container #brand{
-  /* display: grid;
-  grid-template-columns: 25% 75%;
-
-  No está tomando la letra Anton
-
-  grid-template-rows: 1fr; */
-
-  display: flex;
-  flex-direction: row;
-
-  align-items: center;
-  justify-items: center;
-}
-
-#brand #logotype{
-  font-family: Anton;
-  width: 50px;
-  line-height: 50px;
-  font-size: 35px;
-  color: #26a69a;
-}
 
 #container{
   display: grid;
@@ -123,7 +92,7 @@ export default {
   align-items: center;
   justify-items: center;
   height: 100vh;
-  font-family: Nunito;
+  font-family: Roboto;
 }
 
 #calculator_form {
@@ -135,20 +104,6 @@ export default {
 
 #calculator_form h2{
   color: #26a69a;
-}
-
-#isotype h1 {
-  color: #26a69a;
-  margin: 0px;
-  padding: 0px;
-}
-
-#isotype h2 {
-  font-size: 24px;
-  color: #26a69a;
-  margin-bottom: 20px;
-  margin: 0px;
-  padding: 0px;
 }
 
 label {
