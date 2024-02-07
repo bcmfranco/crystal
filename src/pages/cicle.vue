@@ -13,17 +13,20 @@
         <h3>Cuántos meses se puede vivir quemando el patrimonio</h3>
       </div>
 
-      <label for="capital">Capital:</label>
-      <input v-model="capital" placeholder="Ingrese el capital" />
+      <label for="capital">Patrimonio:</label>
+      <input v-model="patrimony" placeholder="Ingrese el patrimonio" />
 
-      <label for="interest">Interés:</label>
-      <input v-model="interest" placeholder="Ingrese el interés" />
+      <label for="salary">Salario:</label>
+      <input v-model="salary" placeholder="Ingrese el salario" />
 
-      <label for="returnX">Retorno neto (X):</label>
-      <input :value="calculate_return_x" disabled />
+      <label for="spent">Salario:</label>
+      <input v-model="spent" placeholder="Ingrese el gasto mensual" />
 
-      <label for="return">Retorno bruto (Y):</label>
-      <input :value="calculate_return_y" disabled />
+      <label for="return_salary">Salarios ahorrados:</label>
+      <input :value="calculate_patrimony_cycles_salary" disabled />
+
+      <label for="return_spent">Meses que puede vivir sin trabajar:</label>
+      <input :value="calculate_patrimony_cycles_spent" disabled />
 
       <button @click="clear_inputs">Limpiar</button>
     </form>
@@ -44,29 +47,23 @@ export default {
   },
   data() {
     return {
-      capital: null,
-      interest: null
+      patrimony: null,
+      salary: null,
+      spent: null
     };
   },
   computed: {
-    calculate_return_x() {
-      if (this.capital && this.interest) {
-        const result = parseFloat(this.capital) * (parseFloat(this.interest) / 100);
+    calculate_patrimony_cycles_salary() {
+      if (this.patrimony && this.salary) {
+        const result = parseFloat(this.patrimony) / parseFloat(this.salary);
         return result !== null ? result.toFixed(2) : null;
       }
       return null;
     },
-    calculate_return_y() {
-      if (this.capital && this.interest) {
-          const result = parseFloat(this.capital) + parseFloat(this.calculate_return_x);
-          return result !== null ? result.toFixed(2) : null;
-      }
-      return null;
-    },
-    calculate_return_12() {
-      if (this.capital && this.interest) {
-          const result = parseFloat(this.calculate_return_x) / 12;
-          return result !== null ? result.toFixed(2) : null;
+    calculate_patrimony_cycles_spent() {
+      if (this.patrimony && this.spent) {
+        const result = parseFloat(this.patrimony) / parseFloat(this.spent);
+        return result !== null ? result.toFixed(2) : null;
       }
       return null;
     },
