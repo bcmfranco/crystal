@@ -3,6 +3,7 @@
     <router-link to="/">Simple</router-link>
     <router-link to="/montly">Mensualizado</router-link>
     <router-link to="/cycle">Ciclos</router-link>
+    <router-link to="/compound">Compuesto</router-link>
   </div>
 </template>
 
