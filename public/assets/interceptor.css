@@ -16,7 +16,7 @@
 #calculator_form {
   display: flex;
   flex-direction: column;
-  max-width: 400px;
+  max-width: 300px;
 }
 
 #form_head{
@@ -69,10 +69,8 @@ button:hover {
     flex-direction: column;
   }
 
-  #container #brand{
-    /* grid-template-columns: 1fr; */
-
-    display: flex;
-    flex-direction: column;
+  #form_head{
+    text-align: center;
   }
+
 }

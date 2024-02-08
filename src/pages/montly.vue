@@ -1,32 +1,34 @@
 <template>
-    <div id="container">
-  
-      <div>
-        <Brander />
-        <Navbarr />
-      </div>
-  
-      <form id="calculator_form" action="">
-        <h2>Calculadora de interés mensualizado</h2>
-        <label for="capital">Capital:</label>
-        <input v-model="capital" placeholder="Ingrese el capital" />
-  
-        <label for="interest">Interés:</label>
-        <input v-model="interest" placeholder="Ingrese el interés" />
-  
-        <label for="returnX">Retorno neto (X):</label>
-        <input :value="calculate_return_x" disabled />
-  
-        <label for="return">Retorno bruto (Y):</label>
-        <input :value="calculate_return_y" disabled />
+  <div id="container">
 
-        <label for="return_12">Retorno mensualizado:</label>
-        <input :value="calculate_return_12" disabled />
-  
-        <button @click="clear_inputs">Limpiar</button>
-      </form>
+    <div>
+      <Brander />
+      <Navbarr />
     </div>
-  </template>
+
+    <form id="calculator_form" action="">
+      <div id="form_head">
+        <h2>Calculadora de interés mensualizado</h2>
+      </div>
+      <label for="capital">Capital:</label>
+      <input v-model="capital" placeholder="Ingrese el capital" />
+
+      <label for="interest">Interés:</label>
+      <input v-model="interest" placeholder="Ingrese el interés" />
+
+      <label for="returnX">Retorno neto (X):</label>
+      <input :value="calculate_return_x" disabled />
+
+      <label for="return">Retorno bruto (Y):</label>
+      <input :value="calculate_return_y" disabled />
+
+      <label for="return_12">Retorno mensualizado:</label>
+      <input :value="calculate_return_12" disabled />
+
+      <button @click="clear_inputs">Limpiar</button>
+    </form>
+  </div>
+</template>
   
   <script>
 
