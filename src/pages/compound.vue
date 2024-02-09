@@ -13,19 +13,19 @@
       <input type="number" v-model="capital" placeholder="Ingrese el capital" />
 
       <label for="interest">Interés:</label>
-      <input v-model="interest" placeholder="Ingrese el interés" />
+      <input type="number" v-model="interest" placeholder="Ingrese el interés" />
 
       <label for="cycles">Ciclos:</label>
-      <input v-model="cycles" placeholder="Durante los cuales se va reinvertir" />
+      <input type="number" v-model="cycles" placeholder="Durante los cuales se va reinvertir" />
 
       <label for="return_simple">Retorno por interés simple:</label>
-      <input :value="calculate_return_simple" disabled />
+      <input type="number" :value="calculate_return_simple" disabled />
 
       <label for="return_compounded">Retorno por interés compuesto:</label>
-      <input :value="calculate_return_compounded" disabled />
+      <input type="number" :value="calculate_return_compounded" disabled />
 
       <label for="return_difference">Diferencia obtenida:</label>
-      <input :value="calculate_return_difference_sc" disabled />
+      <input type="number" :value="calculate_return_difference_sc" disabled />
 
       <button @click="clear_inputs">Limpiar</button>
     </form>

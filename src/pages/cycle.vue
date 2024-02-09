@@ -14,19 +14,19 @@
       </div>
 
       <label for="capital">Patrimonio:</label>
-      <input v-model="patrimony" placeholder="Ingrese el patrimonio" />
+      <input type="number" v-model="patrimony" placeholder="Ingrese el patrimonio" />
 
       <label for="salary">Salario:</label>
-      <input v-model="salary" placeholder="Ingrese el salario" />
+      <input type="number" v-model="salary" placeholder="Ingrese el salario" />
 
       <label for="spent">Salario:</label>
-      <input v-model="spent" placeholder="Ingrese el gasto mensual" />
+      <input type="number" v-model="spent" placeholder="Ingrese el gasto mensual" />
 
       <label for="return_salary">Salarios ahorrados:</label>
-      <input :value="calculate_patrimony_cycles_salary" disabled />
+      <input type="number" :value="calculate_patrimony_cycles_salary" disabled />
 
       <label for="return_spent">Meses que puede vivir sin trabajar:</label>
-      <input :value="calculate_patrimony_cycles_spent" disabled />
+      <input type="number" :value="calculate_patrimony_cycles_spent" disabled />
 
       <button @click="clear_inputs">Limpiar</button>
     </form>

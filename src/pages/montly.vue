@@ -11,19 +11,19 @@
         <h2>Calculadora de interés mensualizado</h2>
       </div>
       <label for="capital">Capital:</label>
-      <input v-model="capital" placeholder="Ingrese el capital" />
+      <input type="number" v-model="capital" placeholder="Ingrese el capital" />
 
       <label for="interest">Interés:</label>
-      <input v-model="interest" placeholder="Ingrese el interés" />
+      <input type="number" v-model="interest" placeholder="Ingrese el interés" />
 
       <label for="returnX">Retorno neto (X):</label>
-      <input :value="calculate_return_x" disabled />
+      <input type="number" :value="calculate_return_x" disabled />
 
       <label for="return">Retorno bruto (Y):</label>
-      <input :value="calculate_return_y" disabled />
+      <input type="number" :value="calculate_return_y" disabled />
 
       <label for="return_12">Retorno mensualizado:</label>
-      <input :value="calculate_return_12" disabled />
+      <input type="number" :value="calculate_return_12" disabled />
 
       <button @click="clear_inputs">Limpiar</button>
     </form>
