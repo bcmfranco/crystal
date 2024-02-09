@@ -23,11 +23,11 @@
     padding: 2px;
     border-radius: 4px;
     transition: background-color 0.3s ease;
-    color: #26a69a; /* Cambia el color según tu paleta de colores */
+    color: #C4368C; /* Cambia el color según tu paleta de colores */
   }
 
   #gumcom_navbarr a:hover {
-    border-bottom: 2px solid #26a69a; /* Cambia el color de fondo al pasar el ratón */
+    border-bottom: 2px solid #C4368C; /* Cambia el color de fondo al pasar el ratón */
   }
 
   @media (max-width: 480px) {
