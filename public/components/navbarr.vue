@@ -4,6 +4,8 @@
     <router-link to="/montly">Mensualizado</router-link>
     <router-link to="/cycle">Ciclos</router-link>
     <router-link to="/compound">Compuesto</router-link>
+    <router-link to="/papers">Activos</router-link>
+
   </div>
 </template>
 

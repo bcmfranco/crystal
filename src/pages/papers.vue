@@ -14,7 +14,7 @@
         <input type="number" v-model="paper_start" placeholder="Valor incial del activo" />
   
         <label for="usd_srtar">Dolar precio inicial:</label>
-        <input type="number" v-model="usd_srtar" placeholder="Dólar al momento de comprar el activo" />
+        <input type="number" v-model="usd_start" placeholder="Dólar al momento de comprar el activo" />
   
         <label for="paper_current">Especie precio actual:</label>
         <input type="number" v-model="paper_current" placeholder="Valor actual del activo" />
@@ -22,11 +22,12 @@
         <label for="usd_current">Dolar precio actual:</label>
         <input type="number" v-model="usd_current" placeholder="Dólar al precio actual" />
 
+        <label for="return_difference_ars">Rendimiento obtenido en pesos:</label>
+        <input type="number" :value="calculate_return_papers_ars" disabled />
+
         <label for="return_difference_usd">Rendimiento obtenido en dólares:</label>
         <input type="number" :value="calculate_return_papers_usd" disabled />
 
-        <label for="return_difference_ars">Rendimiento obtenido en pesos:</label>
-        <input type="number" :value="calculate_return_papers_ars" disabled />
   
         <button @click="clear_inputs">Limpiar</button>
       </form>
@@ -43,6 +44,8 @@
   import Navbarr from '../../public/components/navbarr.vue';
   import Footer from '../../public/components/footer.vue';
 
+  // No está funcionando de manera reactiva o de ninguna manera
+  /// hay que empezar a debuggear los métodos a ver si está entrando ahí
   
   export default {
     components: {
@@ -52,27 +55,27 @@
     },
     data() {
       return {
-        capital: null,
-        interest: null,
-        cycles: null,
-        return_simple: null,
-        return_compounded: null,
-        return_difference: null,
+        paper_start: null,
+        usd_start: null,
+        paper_current: null,
+        usd_current: null
       };
     },
     computed: {
-        calculate_return_papers_ars() {
-        if (this.paper_start && this.usd_srtar && this.paper_current && this.usd_current) {
-          const result = ( parseFloat(this.paper_current) - (parseFloat(this.paper_star) / parseFloat(this.usd_srtar)))
+      calculate_return_papers_ars() {
+      if (this.paper_start && this.usd_start && this.paper_current && this.usd_current) {
+        const result = parseFloat(this.paper_start) * (parseFloat(this.usd_start) / 100);
+        this.return_difference_ars = result.toFixed(2);
+        return this.return_difference_ars;
+
+      }
+      return null;
+    },
+      calculate_return_papers_usd() {
+        if (this.paper_start && this.usd_start && this.paper_current && this.usd_current) {
+            const result = ( parseFloat(this.paper_current) - (parseFloat(this.paper_start) / parseFloat(this.usd_start)) / parseFloat(this.usd_current))
           this.return_difference_usd = result.toFixed(2);
           return this.return_difference_usd;
-        }
-      },
-      calculate_return_papers_usd() {
-        if (this.return_simple && this.return_compounded) {
-            const result = ( parseFloat(this.paper_current) - (parseFloat(this.paper_star) / parseFloat(this.usd_srtar)) / parseFloat(this.usd_current))
-          this.return_difference = result.toFixed(2);
-          return this.return_difference;
         }
       }
     },

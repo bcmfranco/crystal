@@ -35,8 +35,6 @@
 
 <script>
 
-// Poner todo el header dentro de un componente, y la navbarr adentro
-
 import Brander from '../../public/components/brander.vue';
 import Navbarr from '../../public/components/navbarr.vue';
 import Footer from '../../public/components/footer.vue';
@@ -55,6 +53,9 @@ export default {
   },
   computed: {
     calculate_return_x() {
+
+      console.log("hi");
+
       if (this.capital && this.interest) {
         const result = parseFloat(this.capital) * (parseFloat(this.interest) / 100);
         return result !== null ? result.toFixed(2) : null;
