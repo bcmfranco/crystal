@@ -29,17 +29,24 @@
 
       <button @click="clear_inputs">Limpiar</button>
     </form>
+    <div>
+      <Footer />
+    </div>
+
   </div>
 </template>
 
 <script>
+
 import Brander from '../../public/components/brander.vue';
 import Navbarr from '../../public/components/navbarr.vue';
+import Footer from '../../public/components/footer.vue';
 
 export default {
   components: {
     Brander,
     Navbarr,
+    Footer
   },
   data() {
     return {

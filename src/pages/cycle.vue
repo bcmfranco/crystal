@@ -30,20 +30,26 @@
 
       <button @click="clear_inputs">Limpiar</button>
     </form>
+
+    <div>
+      <Footer />
+    </div>
+
   </div>
 </template>
 
 <script>
 
-// Poner todo el header dentro de un componente, y la navbarr adentro
-
 import Brander from '../../public/components/brander.vue';
 import Navbarr from '../../public/components/navbarr.vue';
+import Footer from '../../public/components/footer.vue';
+
 
 export default {
   components: {
     Brander,
     Navbarr,
+    Footer
   },
   data() {
     return {
