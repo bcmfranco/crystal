@@ -64,7 +64,7 @@
     computed: {
       calculate_return_papers_ars() {
       if (this.paper_start && this.usd_start && this.paper_current && this.usd_current) {
-        const result = parseFloat(this.paper_start) * (parseFloat(this.usd_start) / 100);
+        const result = parseFloat(this.paper_current) - (parseFloat(this.paper_start) / parseFloat(this.usd_start) * parseFloat(this.usd_current));
         this.return_difference_ars = result.toFixed(2);
         return this.return_difference_ars;
 
@@ -73,7 +73,7 @@
     },
       calculate_return_papers_usd() {
         if (this.paper_start && this.usd_start && this.paper_current && this.usd_current) {
-            const result = ( parseFloat(this.paper_current) - (parseFloat(this.paper_start) / parseFloat(this.usd_start)) / parseFloat(this.usd_current))
+          const result = (parseFloat(this.paper_current) - (parseFloat(this.paper_start) / parseFloat(this.usd_start) * parseFloat(this.usd_current))) / parseFloat(this.usd_current) ;
           this.return_difference_usd = result.toFixed(2);
           return this.return_difference_usd;
         }
