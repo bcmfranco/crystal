@@ -19,7 +19,7 @@
       <label for="salary">Salario:</label>
       <input type="number" v-model="salary" placeholder="Ingrese el salario" />
 
-      <label for="spent">Salario:</label>
+      <label for="spent">Gasto:</label>
       <input type="number" v-model="spent" placeholder="Ingrese el gasto mensual" />
 
       <label for="return_salary">Salarios ahorrados:</label>

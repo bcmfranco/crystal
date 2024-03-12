@@ -43,9 +43,6 @@
   import Brander from '../../public/components/brander.vue';
   import Navbarr from '../../public/components/navbarr.vue';
   import Footer from '../../public/components/footer.vue';
-
-  // No está funcionando de manera reactiva o de ninguna manera
-  /// hay que empezar a debuggear los métodos a ver si está entrando ahí
   
   export default {
     components: {
@@ -63,20 +60,24 @@
     },
     computed: {
       calculate_return_papers_ars() {
-      if (this.paper_start && this.usd_start && this.paper_current && this.usd_current) {
-        const result = parseFloat(this.paper_current) - (parseFloat(this.paper_start) / parseFloat(this.usd_start) * parseFloat(this.usd_current));
-        this.return_difference_ars = result.toFixed(2);
-        return this.return_difference_ars;
-
-      }
-      return null;
-    },
+        if (this.paper_start && this.usd_start && this.paper_current && this.usd_current) {
+          const paperStartARS = parseFloat(this.paper_start) * parseFloat(this.usd_start);
+          const paperCurrentARS = parseFloat(this.paper_current) * parseFloat(this.usd_current);
+          const result = paperCurrentARS - paperStartARS;
+          this.return_difference_ars = result.toFixed(2);
+          return this.return_difference_ars;
+        }
+        return null;
+      },
       calculate_return_papers_usd() {
         if (this.paper_start && this.usd_start && this.paper_current && this.usd_current) {
-          const result = (parseFloat(this.paper_current) - (parseFloat(this.paper_start) / parseFloat(this.usd_start) * parseFloat(this.usd_current))) / parseFloat(this.usd_current) ;
+          const paperStartARS = parseFloat(this.paper_start) * parseFloat(this.usd_start);
+          const paperCurrentARS = parseFloat(this.paper_current) * parseFloat(this.usd_current);
+          const result = (paperCurrentARS - paperStartARS) / parseFloat(this.usd_current);
           this.return_difference_usd = result.toFixed(2);
           return this.return_difference_usd;
         }
+        return null;
       }
     },
     methods: {
