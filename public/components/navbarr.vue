@@ -5,6 +5,7 @@
     <router-link to="/cycle">Ciclos</router-link>
     <router-link to="/compound">Compuesto</router-link>
     <router-link to="/papers">Activos</router-link>
+    <router-link to="/freedom">Libertad</router-link>
 
   </div>
 </template>
