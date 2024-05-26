@@ -6,7 +6,7 @@
     </div>
     <form id="calculator_form" action="">
       <div id="form_head">
-        <h2>Calculadora de interés simple</h2>
+        <h2>Calculadora de interés compuesto</h2>
       </div>
 
       <label for="capital">Capital:</label>
