@@ -14,7 +14,7 @@
 
 #gumcom_navbarr {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     justify-items: stretch;
   }
 
@@ -34,6 +34,13 @@
   }
 
   @media (max-width: 480px) {
+
+    #gumcom_navbarr {
+      max-width: 80vw;
+      padding: 0 5vw;
+    }
+
+
     a {
       font-size: 14px; /* Ajusta el tamaño de fuente para dispositivos móviles */
       padding: 8px; /* Ajusta el espaciado interno para dispositivos móviles */
