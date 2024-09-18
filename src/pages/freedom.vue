@@ -63,14 +63,14 @@
         var annual_required = this.monthly_spent * 12;
         this.necessary_capital = annual_required / this.expected_profit * 100;
 
-        return this.necessary_capital;
+        return this.necessary_capital.toFixed(0);
       },
       calculate_freedom_ab(){
 
         var annual_required = this.monthly_spent * 12;
         this.remaining_capital = (annual_required / this.expected_profit * 100) - this.saving;
         
-        return this.remaining_capital;
+        return this.remaining_capital.toFixed(0);
       },
       clear_inputs() {
         this.capital = null;
