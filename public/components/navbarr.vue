@@ -6,16 +6,16 @@
     <router-link to="/compound">Compuesto</router-link>
     <router-link to="/papers">Activos</router-link>
     <router-link to="/freedom">Libertad</router-link>
-
+    <router-link to="/freedom">Reintegros</router-link>
   </div>
 </template>
 
 <style scoped>
 
 #gumcom_navbarr {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: stretch;
   }
 
   #gumcom_navbarr a {
@@ -23,9 +23,9 @@
     color: inherit;
     cursor: pointer;
     font-size: 16px;
-    padding: 2px;
     border-radius: 4px;
     transition: background-color 0.3s ease;
+    text-align: center;
     color: #C4368C; /* Cambia el color según tu paleta de colores */
   }
 

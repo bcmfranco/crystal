@@ -69,6 +69,7 @@
     #gumcom_brander{
       flex-direction: column;
       align-items: start;
+      padding: 0px 20px;
     }
 
 
