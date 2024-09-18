@@ -6,7 +6,7 @@
     <router-link to="/compound">Compuesto</router-link>
     <router-link to="/papers">Activos</router-link>
     <router-link to="/freedom">Libertad</router-link>
-    <router-link to="/freedom">Reintegros</router-link>
+    <router-link to="/refund">Reintegros</router-link>
   </div>
 </template>
 
